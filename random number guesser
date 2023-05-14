@@ -1,0 +1,44 @@
+#Danna Krayem
+#python guess a random number assignment
+#eta 20 minutes
+#actual 20 min
+
+from random import randint
+#from random library import randint
+#create variable and put random number in it
+#call function randint and create number between 1 and 10
+answer = randint(1,10)
+
+again = True
+
+while (again):
+    #allow user to input a guess variable
+    guess = int(input("please enter a number between 1 and 10"))
+    #int before input parses guess into an integer
+    #check if guess is same as answer
+    if guess == answer:
+        again = False
+        print("congrats; it's correct")
+        #elif means elseif
+    elif guess < answer:
+        print("too low")
+    else:
+        print("too high")
+#if they don't guess the right answer, print the right one'
+#print statement below won't happen until out of loop because it falls under same indent as while loop line
+print("correct number = ", answer)
+
+#lets say num1 is a float which is a decimal
+num1 = float(input("enter a decimal"))
+#form number to format; width# to decimals
+#to format number to two decimal places maximum, use following code
+print(format(num1, '10.2'))
+print(format(num1, '2'))
+print(format(123456789.987654, 5.4))
+
+twoDec = 2.05
+fiveDec = 13.12345
+bigDec = 12345678.9876543
+#{} list variables to format
+#0 means pick first number in list and set it to 3 decimals float
+print("two Dec # = {0:.3f}" "five decimals = {1:.4f}" "big # = {2:.4f}".format(twoDec,fiveDec, bigDec))
